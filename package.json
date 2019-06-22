@@ -1,0 +1,27 @@
+{
+  "name": "gps103",
+  "version": "1.0.0",
+  "description": "GPS103 GPS Tracker message parser",
+  "main": "gps103.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vondraussen/gps103.git"
+  },
+  "keywords": [
+    "GPS",
+    "GPS103",
+    "Tracker"
+  ],
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "author": "Andy Hempel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vondraussen/gps103/issues"
+  },
+  "homepage": "https://github.com/vondraussen/gps103#readme"
+}
