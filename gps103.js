@@ -97,6 +97,10 @@ Gps103.prototype.encode = function (data) {
     return new Buffer.from(msg);
 }
 
+Gps103.prototype.clearMsgBuffer = function () {
+    this.msgBuffer.length = 0;
+}
+
 function appendCsvText(string, part) {
     return string + ',' + part;
 }
