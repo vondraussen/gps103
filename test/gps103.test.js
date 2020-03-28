@@ -94,6 +94,7 @@ test('Alarm/Location Test', () => {
     expect(gps103.speed).toBe(locationResult.speed);
     expect(gps103.course).toBe(locationResult.course);
     expect(gps103.hasFix).toBe(locationResult.hasFix);
+    expect(gps103.msgBuffer[1].imei).toStrictEqual(locationResult.imei);
 
     gps103.parse(locationNone);
     expect(gps103.imei).toBe(locationNoneResult.imei);
