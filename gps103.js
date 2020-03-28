@@ -43,7 +43,11 @@ Gps103.prototype.parse = function (msg) {
             parsed.imei = parseInt(data[0].split(':')[1]);
             parsed.info = data[1];
             parsed.gpsTime = getGpsTime(data[2]);
-            parsed.fixTime = getFixTime(data[2], data[5]);
+            parsed.fixTimestamp = getFixTime(data[2], data[5]);
+            if (parsed.fixTimestamp) {
+                let date = new Date(parsed.fixTimestamp * 1000);
+                parsed.fixTime = date.toISOString();
+            }
             parsed.notSure1 = data[3];
             parsed.hasFix = Boolean(getFixType(data[4]));
             parsed.lat = getLatitude(data[8], data[7]);

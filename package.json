@@ -1,6 +1,6 @@
 {
   "name": "gps103",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "GPS103 GPS Tracker message parser",
   "main": "gps103.js",
   "scripts": {

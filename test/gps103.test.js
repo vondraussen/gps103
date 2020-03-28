@@ -36,6 +36,20 @@ const locationResult = {
     info: 'acc on',
     hasFix: true,
     gpsTime: '2019-03-23T19:09:55.000Z',
+    fixTimestamp: 1553364593,
+    fixTime: '2019-03-23T18:09:53.000Z',
+    lat: 48.93540167,
+    lon: 9.49953333,
+    speed: 0,
+    course: 0
+}
+const locationEncodeResult = {
+    imei: 123456789012345,
+    expectsResponse: false,
+    event: { number: 0x12, string: 'location' },
+    info: 'acc on',
+    hasFix: true,
+    gpsTime: '2019-03-23T19:09:55.000Z',
     fixTime: 1553364593,
     lat: 48.93540167,
     lon: 9.49953333,
@@ -95,6 +109,8 @@ test('Alarm/Location Test', () => {
     expect(gps103.course).toBe(locationResult.course);
     expect(gps103.hasFix).toBe(locationResult.hasFix);
     expect(gps103.msgBuffer[1].imei).toStrictEqual(locationResult.imei);
+    expect(gps103.fixTimestamp).toBe(locationResult.fixTimestamp);
+    expect(gps103.fixTime).toBe(locationResult.fixTime);
 
     gps103.parse(locationNone);
     expect(gps103.imei).toBe(locationNoneResult.imei);
@@ -131,6 +147,6 @@ test('Encoding Test', () => {
     expect(msg).toStrictEqual(login);
     msg = gps103.encode(heartbeatResult);
     expect(msg).toStrictEqual(heartbeat);
-    msg = gps103.encode(locationResult);
+    msg = gps103.encode(locationEncodeResult);
     expect(msg).toStrictEqual(location);
 });
