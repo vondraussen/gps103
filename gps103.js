@@ -12,7 +12,6 @@ module.exports = Gps103 = function () {
 // the state of the last message will be represented in Gps103
 Gps103.prototype.parse = function (msg) {
     this.msgBufferRaw.length = 0;
-    this.msgBuffer.length = 0;
     let messages = msg.toString().split(';').slice(0, -1); // slice off empty ele
     let loginRegex = /\#\#,imei:(\d{15}),A$/;
     let heartbeatRegex = /^\d{15}$/;

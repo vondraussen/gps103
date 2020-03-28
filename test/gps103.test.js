@@ -117,6 +117,11 @@ test('Multiple Messages Test', () => {
     expect(gps103.msgBufferRaw.length).toBe(3);
     gps103.parse(locationQuad);
     expect(gps103.msgBufferRaw.length).toBe(4);
+
+    expect(gps103.msgBuffer.length).toBe(1 + 2 + 3 + 4);
+    gps103.clearMsgBuffer();
+    gps103.parse(locationQuad);
+    expect(gps103.msgBuffer.length).toBe(4);
 });
 
 test('Encoding Test', () => {
