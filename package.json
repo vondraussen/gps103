@@ -1,6 +1,6 @@
 {
   "name": "gps103",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "GPS103 GPS Tracker message parser",
   "main": "gps103.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "Tracker"
   ],
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^27.0.6"
   },
   "author": "Andy Hempel",
   "license": "ISC",
