@@ -1,4 +1,4 @@
-![Node.js CI](https://github.com/vondraussen/gps103/workflows/Node.js%20CI/badge.svg?branch=master) ![Node.js Package](https://github.com/vondraussen/gps103/workflows/Node.js%20Package/badge.svg?branch=master)
+![Node.js CI](https://github.com/vondraussen/gps103/workflows/Node.js%20CI/badge.svg?branch=master) ![Node.js Package](https://github.com/vondraussen/gps103/workflows/Node.js%20Package/badge.svg)
 
 # GPS103 Message Parser
 This is a GPS103 GPS Tracker message parser implementation. It can be used to implement your own server.
